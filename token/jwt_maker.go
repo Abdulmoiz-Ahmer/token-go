@@ -33,7 +33,8 @@ func (maker *JwtMaker) CreateToken(username string, duration time.Duration) (str
 
 // VerifyToken checks if the token is valid or not
 func (maker *JwtMaker) VerifyToken(token string) (*Payload, error) {
-	keyFunc := func(token *jwt.Token) (interface{}, error) {
+	// change any for interface{} if you are using Go < 1.18
+	keyFunc := func(token *jwt.Token) (any, error) {
 		_, ok := token.Method.(*jwt.SigningMethodHMAC)
 		if !ok {
 			return nil, ErrInvalidToken
