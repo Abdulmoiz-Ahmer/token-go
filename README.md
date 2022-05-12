@@ -1,1 +1,1 @@
-# JWT & PASETO Implementation of the Token Based Authentication
+# Token-based authentication using JWT and PASETO
