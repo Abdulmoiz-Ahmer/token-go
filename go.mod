@@ -1,4 +1,4 @@
-module github.com/dsha256/token-based-authentication
+module github.com/dsha256/token-go
 
 go 1.18
 
