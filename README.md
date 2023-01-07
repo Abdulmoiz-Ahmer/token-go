@@ -3,7 +3,7 @@
 
 ---
 
-# Features:
+# :sparkles: Features:
 - [x] `JWT` tokens generation and verification.
 - [x] `PASETO` tokens generation and verification.
 - [x] Protected from using the weak/broken algorithms (ex. `ECDSA`, `RSA` with `PKCSv1.5`) incase of using `JWT`.
@@ -14,7 +14,7 @@
 
 ---
 
-# Examples
+# :candle: Examples
 ## PASETO Token
 ```go
 package main
