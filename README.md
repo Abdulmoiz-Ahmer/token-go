@@ -91,14 +91,14 @@ func main() {
 		log.Fatalf("Failed to create PASETO tkn: %v", err)
 	}
 
-	log.Println(tkn)
-	log.Println(payload)
+	log.Println(tkn) // Output #1
+	log.Println(payload) // Output #2
 
 	payload, err = maker.VerifyToken(tkn)
 	if err != nil {
 		log.Fatalf("Invalid token: %v", err)
 	}
-	log.Println(payload)
+	log.Println(payload) // Output #3
 }
 ```
 
@@ -157,3 +157,5 @@ keyFunc := func(token *jwt.Token) (any, error) {
 # :copyright: LICENSE
 `token-go` is licensed under the `GNU GENERAL PUBLIC LICENSE`
 
+# :wink: BTW
+### You can always open any type of issue with an epic MEME in it. Just use the #meme tag, please.
