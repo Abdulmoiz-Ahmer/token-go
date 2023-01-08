@@ -3,7 +3,7 @@
 
 ---
 
-# Features:
+# :sparkles: Features:
 - [x] `JWT` tokens generation and verification.
 - [x] `PASETO` tokens generation and verification.
 - [x] Protected from using the weak/broken algorithms (ex. `ECDSA`, `RSA` with `PKCSv1.5`) incase of using `JWT`.
@@ -14,7 +14,7 @@
 
 ---
 
-# Examples
+# :candle: Examples
 ## PASETO Token
 ```go
 package main
@@ -91,14 +91,14 @@ func main() {
 		log.Fatalf("Failed to create PASETO tkn: %v", err)
 	}
 
-	log.Println(tkn)
-	log.Println(payload)
+	log.Println(tkn) // Output #1
+	log.Println(payload) // Output #2
 
 	payload, err = maker.VerifyToken(tkn)
 	if err != nil {
 		log.Fatalf("Invalid token: %v", err)
 	}
-	log.Println(payload)
+	log.Println(payload) // Output #3
 }
 ```
 
@@ -118,3 +118,44 @@ Output #3
 ```txt
 &{dd7c3261-761d-4ddb-aa71-5155731267b7 YOUR USERNAME HERE 2023-01-07 15:06:49.300464687 +0400 +04 2023-01-07 15:07:49.300464787 +0400 +04}
 ```
+
+---
+
+# :beers: The security responsibilities `token-go` takes for you
+### Start from the basics - How the token-based authentication works in a high-level abstraction?
+![](https://github.com/dsha256/token-go/blob/main/doc/images/Token-based%20authentication.png)
+
+### What's the problem of JWT?
+![](https://github.com/dsha256/token-go/blob/main/doc/images/What's%20the%20problem%20of%20JWT.png)
+
+### How `token-go` is going to help you?
+1. Choosing a strong algorithm:
+```go
+jwtToken := jwt.NewWithClaims(jwt.SigningMethodHS256, payload)
+```
+
+2. Checking for the correct algorithm:
+```go
+keyFunc := func(token *jwt.Token) (any, error) {
+		_, ok := token.Method.(*jwt.SigningMethodHMAC)
+		if !ok {
+			return nil, ErrInvalidToken
+		}
+		return []byte(maker.secretKey), nil
+	}
+```
+
+### Well, what about PASETO?
+- Developer don't have too choose the algorithm
+- Only need to select the version of PASETO
+- Each version has 1 stron cipher cuite
+- Only two most recent PASETO versions are accepted
+> So PASETO provides high-level security by default.
+
+---
+
+# :copyright: LICENSE
+`token-go` is licensed under the `GNU GENERAL PUBLIC LICENSE`
+
+# :wink: BTW
+### You can always open any type of issue with an epic MEME in it. Just use the #meme tag, please.

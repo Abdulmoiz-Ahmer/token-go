@@ -1,0 +1,7 @@
+- Make sure you have a clear idea of what you want to contribute before you start.
+- Check the existing issues in the repository to see if your contribution has already been suggested. If it has, consider adding your thoughts to the existing issue rather than creating a new one.
+- Follow the repository's code style and naming conventions.
+- Test your changes thoroughly to make sure they do not break any existing functionality.
+- Make sure your contribution is properly documented.
+- Submit a pull request with a clear explanation of your changes and why you are making them.
+- Be open to feedback and suggestions from the repository maintainers.
