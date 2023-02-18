@@ -1,8 +1,9 @@
 package token
 
 import (
-	"github.com/google/uuid"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 // Payload contains the payload data of the token

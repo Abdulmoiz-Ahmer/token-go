@@ -1,9 +1,10 @@
 package token
 
 import (
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestPasetoMaker(t *testing.T) {

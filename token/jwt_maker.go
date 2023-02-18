@@ -2,8 +2,9 @@ package token
 
 import (
 	"errors"
-	"github.com/dgrijalva/jwt-go"
 	"time"
+
+	"github.com/dgrijalva/jwt-go"
 )
 
 // JwtMaker is a JSON Web Token maker

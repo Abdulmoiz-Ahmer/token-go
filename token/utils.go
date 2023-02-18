@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// RandomString generates random string.
 func RandomString(length int) string {
 	var sb strings.Builder
 	k := len(englishAlphabet)
