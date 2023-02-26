@@ -7,7 +7,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/o1egl/paseto v1.0.0
 	github.com/o1egl/paseto/v2 v2.1.1
-	github.com/stretchr/testify v1.8.1
+	github.com/stretchr/testify v1.8.2
 	golang.org/x/crypto v0.6.0
 )
 
